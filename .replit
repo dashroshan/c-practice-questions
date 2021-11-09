@@ -1,0 +1,1 @@
+run = "gcc -o output main.c\nclear\n./output\nrm output"
