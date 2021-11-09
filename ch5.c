@@ -214,3 +214,95 @@ int main()
   return(0);
 }
 */
+
+
+
+/*Q5.8
+#include <stdio.h>
+int main()
+{
+	int itemType;
+	double totalCost;
+	printf("Enter total amount : ");
+	scanf("%lf", &totalCost);
+	printf("Enter 1 for mill cloth and 2 for handloom items : ");
+	scanf("%d", &itemType);
+	if (itemType != 1 && itemType != 2)
+	{
+		printf("Not a valid input!\n");
+	}
+	switch ((int)totalCost)
+	{
+	case 0 ... 100:
+		totalCost *= (itemType == 1) ? 1 : 0.95;
+		break;
+	case 101 ... 200:
+		totalCost *= (itemType == 1) ? 0.95 : 0.925;
+		break;
+	case 201 ... 300:
+		totalCost *= (itemType == 1) ? 0.925 : 0.9;
+		break;
+	default:
+		totalCost *= (itemType == 1) ? 0.9 : 0.85;
+		break;
+	}
+	printf("The discounted cost is %0.2lf", totalCost);
+	return (0);
+}
+*/
+
+
+
+/*Q5.9 has an error in it*/
+
+
+
+/*Q5.10
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	double a, b, c, d;
+	printf("Enter the eqn as ax2+bx+c : ");
+	scanf("%lfx2+%lfx+%lf", &a, &b, &c);
+	if (a == 0 && b == 0)
+	{
+		printf("No solution!");
+	}
+	else if (a == 0)
+	{
+		printf("There is only one root which is : %0.3lf", -c / b);
+	}
+	else
+	{
+		d = b * b - 4 * a * c;
+		if (d < 0)
+		{
+			printf("No real roots!");
+		}
+		else
+		{
+			d = sqrt(d);
+			printf("The roots are %0.3lf and %0.3lf", (-b + d) / (2 * a), (-b - d) / (2 * a));
+		}
+	}
+	return (0);
+}
+*/
+
+
+
+/*Q5.11
+#include <stdio.h>
+int main()
+{
+	int a, b, c;
+	printf("Enter the 3 sides separated by spaces : ");
+	scanf("%d %d %d", &a, &b, &c);
+	if (a * a + b * b == c * c || b * b + c * c == a * a || c * c + a * a == b * b)
+	{
+		printf("This is a right-angled triangle!");
+	}
+	return (0);
+}
+*/
