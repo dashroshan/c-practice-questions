@@ -282,3 +282,126 @@ int main()
 	return (0);
 }
 */
+
+/*Q5.12
+#include <stdio.h>
+int main()
+{
+	int units, charge;
+	printf("Enter units consumed : ");
+	scanf("%d", &units);
+	if (units <= 200)
+	{
+		charge = units * 80;
+	}
+	else
+	{
+		if (units <= 300)
+		{
+			charge = (units - 200) * 90 + 16000;
+		}
+		else
+		{
+			charge = (units - 300) * 100 + 25000;
+			if (units > 400)
+			{
+				charge *= 1.15;
+			}
+		}
+	}
+	printf("Charge : %0.2lfrs", (double)charge / 100);
+	return (0);
+}
+*/
+
+/*Q5.13
+#include <stdio.h>
+int main()
+{
+	int totalNum = 0, sum = 0;
+	for (int i = 0; i <= 100; i += 1)
+	{
+		if (i % 6 == 0 && i % 4 != 0)
+		{
+			totalNum += 1;
+			sum += i;
+		}
+	}
+	printf("There are %d such numbers and their sum is %d", totalNum, sum);
+	return (0);
+}
+*/
+
+/*Q5.14a
+#include <stdio.h>
+int main()
+{
+	int num;
+	printf("Enter a positive integer : ");
+	scanf("%d", &num);
+	for (int i = 2; i < num; i += 1)
+	{
+		if (num % i == 0)
+		{
+			printf("%d is not a prime number!", num);
+			goto lastline;
+		}
+	}
+	printf("%d is a prime number!", num);
+lastline:
+	return (0);
+}
+*/
+
+/*Q5.14b
+#include <stdio.h>
+int main()
+{
+	int lowerRange = 100, upperRange = 200;
+	int totalPrime = 0, isPrime = 0;
+	for (int num = lowerRange; num <= upperRange; num += 1)
+	{
+		isPrime = 1;
+		for (int i = 2; i < num; i += 1)
+		{
+			if (num % i == 0)
+			{
+				isPrime = 0;
+				break;
+			}
+		}
+		totalPrime += (isPrime == 1) ? 1 : 0;
+	}
+	printf("There are %d prime numbers between %d and %d!", totalPrime, lowerRange, upperRange);
+	return (0);
+}
+*/
+
+/*Q5.15
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	char T;
+	double x;
+	printf("Enter s for sin, c for cos, or t for tan : ");
+	T = getchar();
+	printf("Enter angle in radian : ");
+	scanf("%lf", &x);
+	switch (T)
+	{
+	case 's':
+	case 'S':
+		printf("sin(%0.3lf)=%0.3lf", x, sin(x));
+		break;
+	case 'c':
+	case 'C':
+		printf("cos(%0.3lf)=%0.3lf", x, cos(x));
+		break;
+	case 't':
+	case 'T':
+		printf("tan(%0.3lf)=%0.3lf", x, tan(x));
+	}
+	return (0);
+}
+*/
