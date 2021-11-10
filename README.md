@@ -26,3 +26,5 @@ Run with possible error messages :
 ```bash
 run = "gcc ch5.c -o out -lm\n./out\nrm out"
 ```
+
+Where **ch5.c** is the file to run and **-lm** is for including math.h
