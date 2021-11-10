@@ -401,6 +401,7 @@ int main()
 	case 't':
 	case 'T':
 		printf("tan(%0.3lf)=%0.3lf", x, tan(x));
+		break;
 	}
 	return (0);
 }
