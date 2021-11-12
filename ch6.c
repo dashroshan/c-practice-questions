@@ -168,3 +168,114 @@ int main()
 	return (0);
 }
 */
+
+/*Q6.9
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int y1, y2;
+	printf("0---y--->\n");
+	printf("|\nx\n|\n");
+	for (double x = 0.0; x < 4.05; x += 0.1)
+	{
+		y1 = (int)(50 * exp(-0.4 * x));
+		y2 = (int)(50 * exp(-0.4 * x * x / 2));
+		for (int y = 0; y <= 50; y += 1)
+		{
+			if (y1 == y2 && y == y1)
+			{
+				printf("#");
+			}
+			else if (y == y1)
+			{
+				printf("0");
+			}
+			else if (y == y2)
+			{
+				printf("*");
+			}
+			else if ((y > y1 && y < y2) || (y > y2 && y < y1))
+			{
+				printf("-");
+			}
+			else
+			{
+				printf(" ");
+			}
+		}
+		printf("\n");
+	}
+	return (0);
+}
+*/
+
+/*Q6.10
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	printf("x  ");
+	for (double i = 0.1; i < 0.99; i += 0.1)
+	{
+		printf("%6.1lf", i);
+	}
+	for (int j = 0; j <= 9; j += 1)
+	{
+		printf("\n%0.1lf", (double)j);
+		for (int k = 1; k <= 9; k += 1)
+		{
+			printf("%6.1lf", exp(-(j + (double)k / 10.0)));
+		}
+	}
+	return (0);
+}
+*/
+
+/*Q6.11
+#include <stdio.h>
+int main()
+{
+	int num, binary[50], arraySize = 0;
+	printf("Enter number : ");
+	scanf("%d", &num);
+	while (num >= 2)
+	{
+		binary[arraySize] = num % 2;
+		num /= 2;
+		arraySize += 1;
+	}
+	binary[arraySize] = num;
+	printf("Binary form : ");
+	for (int id = arraySize; id >= 0; id -= 1)
+	{
+		printf("%d", binary[id]);
+	}
+	return (0);
+}
+*/
+
+/*Q6.12 The pattern doesn't make any sense*/
+
+/*Q6.13
+#include <stdio.h>
+int main()
+{
+	double eSum = 0, eSumTemp = 1, factorial = 1.0;
+	for (int i = 1; 0 == 0; i += 1)
+	{
+		factorial *= (double)i;
+		eSumTemp += 1.0 / factorial;
+		if (eSumTemp - eSum >= 0.00001)
+		{
+			eSum = eSumTemp;
+		}
+		else
+		{
+			break;
+		}
+	}
+	printf("e=%lf", eSum);
+	return (0);
+}
+*/
