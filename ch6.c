@@ -279,3 +279,235 @@ int main()
 	return (0);
 }
 */
+
+/*Q6.14a
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	double x, tempSin, sin, diff, factorial = 1.0;
+	int plusMinus = 1;
+	printf("Enter radian value : ");
+	scanf("%lf", &x);
+	tempSin = x;
+	sin = x;
+	for (int i = 3; 0 == 0; i += 2)
+	{
+		plusMinus = (plusMinus == 1) ? -1 : 1;
+		factorial *= (i - 1) * i;
+		tempSin += plusMinus * (pow(x, i) / factorial);
+		diff = tempSin - sin;
+		diff = (diff > 0) ? diff : -diff;
+		if (diff < 0.00001)
+		{
+			sin = tempSin;
+			break;
+		}
+		else
+		{
+			sin = tempSin;
+		}
+	}
+	printf("sin(%0.5lf)=%0.5lf", x, sin);
+	return (0);
+}
+*/
+
+/*Q6.14b
+#include <stdio.h>
+int main()
+{
+	double x, tempCos = 1, cos = 1, diff, factorial = 1.0;
+	int plusMinus = 1;
+	printf("Enter radian value : ");
+	scanf("%lf", &x);
+	for (int i = 2; 0 == 0; i += 2)
+	{
+		plusMinus = (plusMinus == 1) ? -1 : 1;
+		factorial *= (i - 1) * i;
+		tempCos += plusMinus * (pow(x, i) / factorial);
+		diff = tempCos - cos;
+		diff = (diff > 0) ? diff : -diff;
+		if (diff < 0.00001)
+		{
+			cos = tempCos;
+			break;
+		}
+		else
+		{
+			cos = tempCos;
+		}
+	}
+	printf("cos(%0.5lf)=%0.5lf", x, cos);
+	return (0);
+}
+*/
+
+/*Q6.14c
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	double tempSum=0, sum;
+	for(int i=1;0==0;i+=1)
+	{
+		tempSum+=pow(1.0/(double)i,i);
+		if (tempSum-sum<0.00001)
+		{
+			break;
+		}
+		else
+		{
+			sum=tempSum;
+		}
+	}
+	printf("Sum=%0.5lf",sum);
+	return (0);
+}
+*/
+
+/*Q6.15
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	double c, d, p, n;
+	printf("Enter original cost : ");
+	scanf("%lf", &c);
+	printf("Enter depreciation rate : ");
+	scanf("%lf", &d);
+	printf("Enter scrap value : ");
+	scanf("%lf", &p);
+	n = log(p / c) / log(1 - d);
+	printf("The useful life is %0.2lf years", n);
+	return (0);
+}
+*/
+
+/*Q6.16a
+#include <stdio.h>
+#define SIZE 5
+int main()
+{
+	for (int y = 1; y <= SIZE; y += 1)
+	{
+		for (int x = 1; x <= SIZE; x += 1)
+		{
+			printf("S ");
+		}
+		printf("\n");
+	}
+	return (0);
+}
+*/
+
+/*Q6.16b
+#include <stdio.h>
+#define SIZE 5
+int main()
+{
+	for (int y = 1; y <= SIZE; y += 1)
+	{
+		for (int x = 1; x <= SIZE; x += 1)
+		{
+			if (x == 1 || x == SIZE || y == 1 || y == SIZE)
+			{
+				printf("S ");
+			}
+			else
+			{
+				printf("  ");
+			}
+		}
+		printf("\n");
+	}
+	return (0);
+}
+*/
+
+/*Q6.17
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	double radian;
+	printf("__________________________________+Y\n");
+	for (int degree = 0; degree <= 180; degree += 15)
+	{
+		printf("|");
+		for (int yVal = 1; yVal <= 30; yVal += 1)
+		{
+			if (yVal == (int)(30 * sin(3.1416 / 180.0 * (double)degree)))
+			{
+				printf("0");
+			}
+			else
+			{
+				printf(" ");
+			}
+		}
+		printf("\n");
+	}
+	printf("+X");
+	return (0);
+}
+*/
+
+/*Q6.18
+#include <stdio.h>
+int main()
+{
+	int total = 0;
+	for (int i = 1; i <= 100; i += 1)
+	{
+		if (!(i % 2 == 0 || i % 3 == 0))
+		{
+			printf("%d ", i);
+			total += 1;
+		}
+	}
+	printf("\nTotal=%d", total);
+	return (0);
+}
+*/
+
+/*Q6.19
+#include <stdio.h>
+int main()
+{
+	for (int y = 1; y <= 5; y += 1)
+	{
+		for (int x = 1; x <= 5; x += 1)
+		{
+			if (x == 3 && y == 3)
+			{
+				printf("O ");
+			}
+			else
+			{
+				printf("S ");
+			}
+		}
+		printf("\n");
+	}
+	return (0);
+}
+*/
+
+/*Q6.20
+#include <stdio.h>
+int main()
+{
+	int nums[10] = {10, 20, 30, 40, 50, -10, -20, -30, 60, -70}, sum = 0, total = 0;
+	for (int i = 0; i <= 9; i += 1)
+	{
+		if (nums[i] > 0)
+		{
+			total += 1;
+			sum += nums[i];
+		}
+	}
+	printf("There were %d positive integers whose sum was %d", total, sum);
+	return (0);
+}
+*/
