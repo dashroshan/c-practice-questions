@@ -1,5 +1,3 @@
-//test
-
 /*Q6.1
 #include <stdio.h>
 int main()
