@@ -360,3 +360,106 @@ int main()
 	return (0);
 }
 */
+
+/*Q7.13
+#include <stdio.h>
+int main()
+{
+	int m, n;
+	printf("Enter matrix size as mxn : ");
+	scanf("%dx%d%*c", &m, &n);
+	int matrix[m][n], newMatrix[n][m];
+	printf("Enter matrix with elements of row separated by spaces :\n");
+	for (int i = 0; i <= m - 1; i += 1)
+	{
+		for (int j = 0; j <= n - 1; j += 1)
+		{
+			scanf("%d%*c", &matrix[i][j]);
+			newMatrix[j][i] = matrix[i][j];
+		}
+	}
+	printf("Transpose of the given matrix :\n");
+	for (int k = 0; k <= n - 1; k += 1)
+	{
+		for (int l = 0; l <= m - 1; l += 1)
+		{
+			printf("%d ", newMatrix[k][l]);
+		}
+		printf("\n");
+	}
+
+	return (0);
+}
+*/
+
+/*Q7.14
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+	int isbn[10], sum = 0;
+	printf("Enter ISBN : ");
+	for (int i = 0; i <= 9; i += 1)
+	{
+		scanf("%1d", &isbn[i]);
+		if (i <= 8)
+		{
+			sum += isbn[i] * (i + 1);
+		}
+	}
+	if (sum / 11 == isbn[9] && sum % 11 == 0)
+	{
+		printf("This is a valid ISBN");
+	}
+	else
+	{
+		printf("This is not a valid ISBN");
+	}
+}
+*/
+
+/*Q7.15
+#include <stdio.h>
+int main()
+{
+	int m, n;
+	printf("Enter matrix size as mxn : ");
+	scanf("%dx%d%*c", &m, &n);
+	int a[m][n], b[m][n];
+	printf("Enter matrix A with elements of row separated by spaces :\n");
+	for (int i = 0; i <= m - 1; i += 1)
+	{
+		for (int j = 0; j <= n - 1; j += 1)
+		{
+			scanf("%d%*c", &a[i][j]);
+		}
+	}
+	printf("Enter matrix B with elements of row separated by spaces :\n");
+	for (int i = 0; i <= m - 1; i += 1)
+	{
+		for (int j = 0; j <= n - 1; j += 1)
+		{
+			scanf("%d%*c", &b[i][j]);
+		}
+	}
+	printf("A+B=\n");
+	for (int i = 0; i <= m - 1; i += 1)
+	{
+		for (int j = 0; j <= n - 1; j += 1)
+		{
+			printf("%d ", a[i][j] + b[i][j]);
+		}
+		printf("\n");
+	}
+	printf("A-B=\n");
+	for (int i = 0; i <= m - 1; i += 1)
+	{
+		for (int j = 0; j <= n - 1; j += 1)
+		{
+			printf("%d ", a[i][j] - b[i][j]);
+		}
+		printf("\n");
+	}
+	return (0);
+}
+*/
