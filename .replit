@@ -1,1 +1,1 @@
-run = "gcc ch5.c -o out -lm\nclear\n./out\nrm out"
+run = "gcc ch8.c -o out -lm\nclear\n./out\nrm out"
