@@ -11,7 +11,6 @@ int main()
 		printf("%d ", name[i]);
 	}
 	return (0);
-}
 */
 
 /*Q8.2
