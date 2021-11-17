@@ -1,4 +1,4 @@
-/*Q8.1
+/* Question : 8.1
 #include <stdio.h>
 int main()
 {
@@ -13,7 +13,7 @@ int main()
 	return (0);
 */
 
-/*Q8.2
+/* Question : 8.2
 #include <stdio.h>
 int main()
 {
@@ -36,7 +36,7 @@ int main()
 }
 */
 
-/*Q8.3
+/* Question : 8.3
 #include <stdio.h>
 int main()
 {
@@ -50,7 +50,7 @@ int main()
 }
 */
 
-/*Q8.4
+/* Question : 8.4
 #include <stdio.h>
 int main()
 {
@@ -83,7 +83,7 @@ int main()
 }
 */
 
-/*Q8.5
+/* Question : 8.5
 #include <stdio.h>
 int main()
 {
@@ -106,7 +106,7 @@ int main()
 }
 */
 
-/*Q8.6
+/* Question : 8.6
 #include <stdio.h>
 #include <string.h>
 int main()
@@ -144,7 +144,7 @@ int main()
 }
 */
 
-/*Q8.8
+/* Question : 8.8
 #include <stdio.h>
 int main()
 {
@@ -165,7 +165,7 @@ skip:
 }
 */
 
-/*Q8.9
+/* Question : 8.9
 #include <stdio.h>
 int main()
 {
@@ -534,7 +534,7 @@ int main()
 }
 */
 
-/*Q8.10
+/* Question : 8.10
 #include <stdio.h>
 #define STUDENTS 4
 int main()
@@ -624,7 +624,7 @@ int main()
 }
 */
 
-/*Q8.11
+/* Question : 8.11
 #include <stdio.h>
 int main()
 {
@@ -649,7 +649,7 @@ int main()
 }
 */
 
-/*Q8.12
+/* Question : 8.12
 #include <stdio.h>
 int main()
 {
@@ -669,7 +669,7 @@ int main()
 }
 */
 
-/*Q8.13
+/* Question : 8.13
 #include <stdio.h>
 int main()
 {
@@ -687,7 +687,7 @@ int main()
 }
 */
 
-/*Q8.14
+/* Question : 8.14
 #include <stdio.h>
 #include <stdlib.h>
 #define TOTAL 3

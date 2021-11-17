@@ -1,4 +1,4 @@
-/*Q5.1a
+/* Question : 5.1a
 #include <stdio.h>
 int main()
 {
@@ -17,7 +17,7 @@ int main()
 }
 */
 
-/*Q5.1b
+/* Question : 5.1b
 #include <stdio.h>
 int main()
 {
@@ -36,7 +36,7 @@ int main()
 }
 */
 
-/*Q5.2
+/* Question : 5.2
 #include <stdio.h>
 int main()
 {
@@ -54,7 +54,7 @@ int main()
 }
 */
 
-/*Q5.3
+/* Question : 5.3
 #include <stdio.h>
 int main()
 {
@@ -78,7 +78,7 @@ int main()
 }
 */
 
-/*Q5.4
+/* Question : 5.4
 #include <stdio.h>
 int main()
 {
@@ -108,7 +108,7 @@ int main()
 }
 */
 
-/*Q5.5
+/* Question : 5.5
 #include <stdio.h>
 int main()
 {
@@ -131,7 +131,7 @@ int main()
 }
 */
 
-/*Q5.6
+/* Question : 5.6
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -150,7 +150,7 @@ int main()
 }
 */
 
-/*Q5.7a
+/* Question : 5.7a
 #include <stdio.h>
 int main()
 {
@@ -173,7 +173,7 @@ int main()
 }
 */
 
-/*Q5.7b
+/* Question : 5.7b
 #include <stdio.h>
 #define TOTALLINES 15
 int main()
@@ -199,7 +199,7 @@ int main()
 }
 */
 
-/*Q5.8
+/* Question : 5.8
 #include <stdio.h>
 int main()
 {
@@ -233,9 +233,9 @@ int main()
 }
 */
 
-/*Q5.9 has an error in it*/
+/* Question : 5.9 has an error in it*/
 
-/*Q5.10
+/* Question : 5.10
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -268,7 +268,7 @@ int main()
 }
 */
 
-/*Q5.11
+/* Question : 5.11
 #include <stdio.h>
 int main()
 {
@@ -283,7 +283,7 @@ int main()
 }
 */
 
-/*Q5.12
+/* Question : 5.12
 #include <stdio.h>
 int main()
 {
@@ -314,7 +314,7 @@ int main()
 }
 */
 
-/*Q5.13
+/* Question : 5.13
 #include <stdio.h>
 int main()
 {
@@ -332,7 +332,7 @@ int main()
 }
 */
 
-/*Q5.14a
+/* Question : 5.14a
 #include <stdio.h>
 int main()
 {
@@ -353,7 +353,7 @@ lastline:
 }
 */
 
-/*Q5.14b
+/* Question : 5.14b
 #include <stdio.h>
 int main()
 {
@@ -377,7 +377,7 @@ int main()
 }
 */
 
-/*Q5.15
+/* Question : 5.15
 #include <stdio.h>
 #include <math.h>
 int main()

@@ -1,4 +1,4 @@
-/*Q6.1
+/* Question : 6.1
 #include <stdio.h>
 int main()
 {
@@ -14,7 +14,7 @@ int main()
 }
 */
 
-/*Q6.2
+/* Question : 6.2
 #include <stdio.h>
 int main()
 {
@@ -30,7 +30,7 @@ int main()
 }
 */
 
-/*Q6.3
+/* Question : 6.3
 #include <stdio.h>
 int main()
 {
@@ -47,7 +47,7 @@ int main()
 }
 */
 
-/*Q6.4
+/* Question : 6.4
 #include <stdio.h>
 int main()
 {
@@ -67,7 +67,7 @@ int main()
 }
 */
 
-/*Q6.5
+/* Question : 6.5
 #include <stdio.h>
 int main()
 {
@@ -83,7 +83,7 @@ int main()
 }
 */
 
-/*Q6.6
+/* Question : 6.6
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -112,7 +112,7 @@ int main()
 	return (0);
 }*/
 
-/*Q6.7a
+/* Question : 6.7a
 #include <stdio.h>
 #define LINES 5
 int main()
@@ -129,7 +129,7 @@ int main()
 }
 */
 
-/*Q6.7b
+/* Question : 6.7b
 #include <stdio.h>
 #define LINES 5
 int main()
@@ -150,7 +150,7 @@ int main()
 }
 */
 
-/*Q6.8
+/* Question : 6.8
 #include <stdio.h>
 int main()
 {
@@ -169,7 +169,7 @@ int main()
 }
 */
 
-/*Q6.9
+/* Question : 6.9
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -210,7 +210,7 @@ int main()
 }
 */
 
-/*Q6.10
+/* Question : 6.10
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -232,7 +232,7 @@ int main()
 }
 */
 
-/*Q6.11
+/* Question : 6.11
 #include <stdio.h>
 int main()
 {
@@ -255,9 +255,9 @@ int main()
 }
 */
 
-/*Q6.12 The pattern doesn't make any sense*/
+/* Question : 6.12 The pattern doesn't make any sense*/
 
-/*Q6.13
+/* Question : 6.13
 #include <stdio.h>
 int main()
 {
@@ -280,7 +280,7 @@ int main()
 }
 */
 
-/*Q6.14a
+/* Question : 6.14a
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -313,7 +313,7 @@ int main()
 }
 */
 
-/*Q6.14b
+/* Question : 6.14b
 #include <stdio.h>
 int main()
 {
@@ -343,7 +343,7 @@ int main()
 }
 */
 
-/*Q6.14c
+/* Question : 6.14c
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -366,7 +366,7 @@ int main()
 }
 */
 
-/*Q6.15
+/* Question : 6.15
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -384,7 +384,7 @@ int main()
 }
 */
 
-/*Q6.16a
+/* Question : 6.16a
 #include <stdio.h>
 #define SIZE 5
 int main()
@@ -401,7 +401,7 @@ int main()
 }
 */
 
-/*Q6.16b
+/* Question : 6.16b
 #include <stdio.h>
 #define SIZE 5
 int main()
@@ -425,7 +425,7 @@ int main()
 }
 */
 
-/*Q6.17
+/* Question : 6.17
 #include <stdio.h>
 #include <math.h>
 int main()
@@ -453,7 +453,7 @@ int main()
 }
 */
 
-/*Q6.18
+/* Question : 6.18
 #include <stdio.h>
 int main()
 {
@@ -471,7 +471,7 @@ int main()
 }
 */
 
-/*Q6.19
+/* Question : 6.19
 #include <stdio.h>
 int main()
 {
@@ -494,7 +494,7 @@ int main()
 }
 */
 
-/*Q6.20
+/* Question : 6.20
 #include <stdio.h>
 int main()
 {
