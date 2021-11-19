@@ -233,3 +233,519 @@ void toUpperCase(char string[], int length)
 	}
 }
 */
+
+/* Question : 9.9
+#include <stdio.h>
+
+void readData(void);
+void calculate(void);
+void add(void);
+void subtract(void);
+void multiply(void);
+void divide(void);
+void showResult(void);
+
+double num1, num2, result;
+char operation;
+
+int main()
+{
+	readData();
+	calculate();
+	showResult();
+	return (0);
+}
+
+void readData(void)
+{
+	printf("Enter the expression : ");
+	scanf("%lf%c%lf", &num1, &operation, &num2);
+}
+
+void calculate(void)
+{
+	switch (operation)
+	{
+	case '+':
+		add();
+		break;
+	case '-':
+		subtract();
+		break;
+	case 'x':
+	case '*':
+		multiply();
+		break;
+	case '/':
+		divide();
+		break;
+	}
+}
+
+void add(void)
+{
+	result = num1 + num2;
+}
+
+void subtract(void)
+{
+	result = num1 - num2;
+}
+
+void multiply(void)
+{
+	result = num1 * num2;
+}
+
+void divide(void)
+{
+	result = num1 / num2;
+}
+
+void showResult(void)
+{
+	printf("Answer = %lf", result);
+}
+*/
+
+/* Question : 9.10
+#include <stdio.h>
+#include <math.h>
+
+void readData(void);
+void calculate(void);
+
+double side1, side2, side3;
+int areaOrPerimeter;
+
+int main()
+{
+	readData();
+	calculate();
+	return (0);
+}
+
+void readData(void)
+{
+	printf("Enter length of the 3 sides separated by spaces : ");
+	scanf("%lf %lf %lf", &side1, &side2, &side3);
+	printf("Enter 1 for area or 2 for perimeter : ");
+	scanf("%d", &areaOrPerimeter);
+}
+
+void calculate(void)
+{
+	double s = (side1 + side2 + side3) / 2, area, perimeter;
+	if (areaOrPerimeter == 1)
+	{
+		area = sqrt(s * (s - side1) * (s - side2) * (s - side3));
+		printf("Area = %0.3lf", area);
+	}
+	else
+	{
+		perimeter = 2 * s;
+		printf("Perimeter = %0.3lf", perimeter);
+	}
+}
+*/
+
+/* Question : 9.11
+#include <stdio.h>
+int m, n;
+int largest(int matrix[m][n]);
+int main()
+{
+	printf("Enter size of the matrix as mxn : ");
+	scanf("%dx%d", &m, &n);
+	printf("Enter matrix with elements of row separated by spaces :\n");
+	int matrix[m][n];
+	for (int i = 0; i < m; i += 1)
+	{
+		for (int j = 0; j < n; j += 1)
+		{
+			scanf("%d%*c", &matrix[i][j]);
+		}
+	}
+	printf("%d is the largest element in the given matrix!", largest(matrix));
+	return (0);
+}
+
+int largest(int matrix[m][n])
+{
+	int large = -1000;
+	for (int i = 0; i < m; i += 1)
+	{
+		for (int j = 0; j < n; j += 1)
+		{
+			if (matrix[i][j] > large)
+			{
+				large = matrix[i][j];
+			}
+		}
+	}
+	return (large);
+}
+*/
+
+/* Question : 9.12
+#include <stdio.h>
+int m, n;
+void calculate(int matrixMN[m][n], int matrixNM[n][m]);
+int main()
+{
+	printf("Enter size of the matrix as mxn : ");
+	scanf("%dx%d", &m, &n);
+	int matrixMN[m][n], matrixNM[n][m];
+	printf("Enter the %dx%d matrix :\n", m, n);
+	for (int i = 0; i < m; i += 1)
+	{
+		for (int j = 0; j < n; j += 1)
+		{
+			scanf("%d%*c", &matrixMN[i][j]);
+		}
+	}
+	printf("Enter the %dx%d matrix :\n", n, m);
+	for (int i = 0; i < n; i += 1)
+	{
+		for (int j = 0; j < m; j += 1)
+		{
+			scanf("%d%*c", &matrixNM[i][j]);
+		}
+	}
+	calculate(matrixMN, matrixNM);
+	return (0);
+}
+
+void calculate(int matrixMN[m][n], int matrixNM[n][m])
+{
+	int value;
+	printf("Product of the 2 given matrices : \n");
+	for (int i = 0; i < m; i += 1)
+	{
+		for (int j = 0; j < m; j += 1)
+		{
+			value = 0;
+			for (int k = 0; k < n; k += 1)
+			{
+				value += matrixMN[i][k] * matrixNM[k][j];
+			}
+			printf("%d ", value);
+		}
+		printf("\n");
+	}
+}
+*/
+
+/* Question : 9.13 : Cannot understand how to display the averages in the matrix */
+
+/* Question : 9.14
+#include <stdio.h>
+#define MAXSIZE 50
+
+int array1[MAXSIZE], array1Size = 0, array2[MAXSIZE], array2Size = 0, arrayMerged[MAXSIZE], arrayMergedSize = 0;
+void readArrays(void);
+void sortArray(int array[], int size);
+void mergeArrays(void);
+void printMergedArray(void);
+
+int main()
+{
+	readArrays();
+	sortArray(array1, array1Size);
+	sortArray(array2, array2Size);
+	mergeArrays();
+	printMergedArray();
+	return (0);
+}
+
+void readArrays(void)
+{
+	char spaceOrNewline;
+	printf("Enter the first integer array with elements separated by spaces : ");
+	for (int i = 0; spaceOrNewline != '\n'; i += 1)
+	{
+		scanf("%d%c", &array1[i], &spaceOrNewline);
+		array1Size += 1;
+	}
+	spaceOrNewline = ' ';
+	printf("Enter the second integer array with elements separated by spaces : ");
+	for (int i = 0; spaceOrNewline != '\n'; i += 1)
+	{
+		scanf("%d%c", &array2[i], &spaceOrNewline);
+		array2Size += 1;
+	}
+}
+
+void sortArray(int array[], int size)
+{
+	int temp;
+	for (int i = 1; i < size; i += 1)
+	{
+		for (int j = 1; j < size; j += 1)
+		{
+			if (array[j - 1] > array[j])
+			{
+				temp = array[j - 1];
+				array[j - 1] = array[j];
+				array[j] = temp;
+			}
+		}
+	}
+}
+
+void mergeArrays(void)
+{
+	int array2MergedUpto = -1;
+	for (int i = 0; i < array1Size; i += 1)
+	{
+		for (int j = array2MergedUpto + 1; array2[j] <= array1[i]; j += 1)
+		{
+			arrayMerged[arrayMergedSize] = array2[j];
+			arrayMergedSize += 1;
+			array2MergedUpto = j;
+		}
+		arrayMerged[arrayMergedSize] = array1[i];
+		arrayMergedSize += 1;
+	}
+	for (int k = array2MergedUpto + 1; k < array2Size; k += 1)
+	{
+		arrayMerged[arrayMergedSize] = array2[k];
+		arrayMergedSize += 1;
+	}
+}
+
+void printMergedArray(void)
+{
+	printf("Merged array : ");
+	for (int i = 0; i < arrayMergedSize; i += 1)
+	{
+		printf("%d ", arrayMerged[i]);
+	}
+}
+*/
+
+/* Question : 9.5
+#include <stdio.h>
+
+void copyString(char toBeCopiedHere[], char toBeCopied[]);
+int compareString(char string1[], char string2[]);
+void addString(char toBeAddedHere[], char toBeAdded[]);
+
+int main()
+{
+	char string[100];
+	copyString(string, "This is the copied string!");
+	printf("%s\n", string);
+	printf("Result of comparing 2 equal strings : %d\n", compareString("test", "test"));
+	printf("Result of comparing 2 unequal strings : %d\n", compareString("test", "taste"));
+	addString(string, " This is added later!");
+	printf("%s", string);
+	return (0);
+}
+
+void copyString(char toBeCopiedHere[], char toBeCopied[])
+{
+	int length = 0;
+	for (int i = 0; toBeCopied[i] != '\0'; i += 1)
+	{
+		toBeCopiedHere[i] = toBeCopied[i];
+		length += 1;
+	}
+	toBeCopiedHere[length] = '\0';
+}
+
+int compareString(char string1[], char string2[])
+{
+	int difference = 0;
+	for (int i = 0; string1[i] != '\0' && string2[i] != '\0'; i += 1)
+	{
+		difference += string1[i] - string2[i];
+	}
+	return (difference);
+}
+
+void addString(char toBeAddedHere[], char toBeAdded[])
+{
+	int oldLength = 0, newLength;
+	for (int i = 0; toBeAddedHere[i] != '\0'; i += 1)
+	{
+		oldLength += 1;
+	}
+	newLength = oldLength;
+	for (int j = oldLength; toBeAdded[j - oldLength] != '\0'; j += 1)
+	{
+		toBeAddedHere[j] = toBeAdded[j - oldLength];
+		newLength += 1;
+	}
+	toBeAddedHere[newLength] = '\0';
+}
+*/
+
+/* Question : 9.16
+#include <stdio.h>
+int find(char string[], char toFind);
+int main()
+{
+	printf("%d", find("This is the string to find the character in!", 'y'));
+	return (0);
+}
+
+int find(char string[], char toFind)
+{
+	for (int i = 0; string[i] != '\0'; i += 1)
+	{
+		if (string[i] == toFind)
+		{
+			return (1);
+		}
+	}
+	return (0);
+}
+*/
+
+/* Question : 9.17
+#include <stdio.h>
+void locate(char toBeInsertedHere[], char toBeInserted[], int index);
+int main()
+{
+	char string[50] = "The text is here!";
+	locate(string, "inserted ", 8);
+	printf("%s", string);
+	return (0);
+}
+
+void locate(char toBeInsertedHere[], char toBeInserted[], int index)
+{
+	char temp[50];
+	int indexAfterAdding = index + 1, lengthAfterIndex = 0;
+	for (int i = index + 1; toBeInsertedHere[i] != '\0'; i += 1)
+	{
+		temp[i - index - 1] = toBeInsertedHere[i];
+		lengthAfterIndex += 1;
+	}
+	for (int j = 0; toBeInserted[j] != '\0'; j += 1)
+	{
+		toBeInsertedHere[index + j + 1] = toBeInserted[j];
+		indexAfterAdding += 1;
+	}
+	for (int k = indexAfterAdding; k < indexAfterAdding + lengthAfterIndex; k += 1)
+	{
+		toBeInsertedHere[k] = temp[k - indexAfterAdding];
+	}
+	toBeInsertedHere[indexAfterAdding + lengthAfterIndex] = '\0';
+}
+*/
+
+/* Question : 9.18
+#include <stdio.h>
+#include <string.h>
+void toMonth(char monthName[], int monthNumber);
+int main()
+{
+	char monthName[20];
+	int monthNumber;
+	printf("Enter month number : ");
+	scanf("%d", &monthNumber);
+	toMonth(monthName, monthNumber);
+	printf("The month is %s!", monthName);
+	return (0);
+}
+
+void toMonth(char monthName[], int monthNumber)
+{
+	switch (monthNumber)
+	{
+	case 1:
+		strcpy(monthName, "January");
+		break;
+
+	case 2:
+		strcpy(monthName, "February");
+		break;
+
+	case 3:
+		strcpy(monthName, "March");
+		break;
+
+	case 4:
+		strcpy(monthName, "April");
+		break;
+
+	case 5:
+		strcpy(monthName, "May");
+		break;
+
+	case 6:
+		strcpy(monthName, "June");
+		break;
+
+	case 7:
+		strcpy(monthName, "July");
+		break;
+
+	case 8:
+		strcpy(monthName, "August");
+		break;
+
+	case 9:
+		strcpy(monthName, "September");
+		break;
+
+	case 10:
+		strcpy(monthName, "October");
+		break;
+
+	case 11:
+		strcpy(monthName, "November");
+		break;
+
+	case 12:
+		strcpy(monthName, "December");
+		break;
+	}
+}
+*/
+
+/* Question : 9.19
+#include <stdio.h>
+void leap(int year);
+int main()
+{
+	int year;
+	printf("Enter year : ");
+	scanf("%d", &year);
+	leap(year);
+	return (0);
+}
+
+void leap(int year)
+{
+	if (year % 4 == 0)
+	{
+		printf("Its a leap year!");
+	}
+	else
+	{
+		printf("Its not a leap year!");
+	}
+}
+*/
+
+/* Question : 9.20
+#include <stdio.h>
+#include <math.h>
+double roundNum(double num);
+int main()
+{
+	double num;
+	printf("Enter number : ");
+	scanf("%lf", &num);
+	printf("Rounded value : %0.2lf", roundNum(num));
+	return (0);
+}
+
+double roundNum(double num)
+{
+	return (round(num * 100) / 100);
+}
+*/
