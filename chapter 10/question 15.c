@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define MAXCHARS 20
-#define TOTALSTUDENTS 2
+#define TOTALSTUDENTS 10
 
 struct date
 {
@@ -34,7 +34,8 @@ void readData(struct student_record inputData[TOTALSTUDENTS])
 	for (int i = 0; i < TOTALSTUDENTS; i += 1)
 	{
 		printf("Enter : name,dd-mm-yyyy,marks : ");
-		scanf("%s,%d-%d-%d,%lf", inputData[i].name, &inputData[i].dob.day, &inputData[i].dob.month, &inputData[i].dob.year, &inputData[i].marks);
+		fflush(stdin);
+		scanf("%[^,],%d-%d-%d,%lf", inputData[i].name, &inputData[i].dob.day, &inputData[i].dob.month, &inputData[i].dob.year, &inputData[i].marks);
 	}
 }
 
@@ -57,8 +58,8 @@ void sortData(struct student_record inputData[TOTALSTUDENTS])
 
 void printData(struct student_record inputData[TOTALSTUDENTS])
 {
-	for(int i=0; i<TOTALSTUDENTS;i+=1)
+	for (int i = 0; i < TOTALSTUDENTS; i += 1)
 	{
-		printf("Rank %d. %-20s%2d-%2d-%4d%0.2lf\n",i+1,inputData[i].name,inputData[i].dob.day,inputData[i].dob.month,inputData[i].dob.year,inputData[i].marks);
+		printf("Rank %d. %-20s%02d-%02d-%04d%15.2lf\n", i + 1, inputData[i].name, inputData[i].dob.day, inputData[i].dob.month, inputData[i].dob.year, inputData[i].marks);
 	}
 }
