@@ -1,3 +1,3 @@
 ## C Practice
 
-These are solution of the exercise questions that I did from the Programming in Ansi C book by E. Balagurusamy. Questions upto chapter 10 are present in a commented out manner in their respective chapter files inside the [chapter 05 to 09](/chapter%2005%20to%2009) folder. Questions from chapter 10 are present inside their respective chapter folders as individual C files.
+These are the answers to the exercise problems from E. Balagurusamy's Programming in Ansi C book. Questions up to chapter 10 are present in their respective chapter files under the [chapter 05 to 09](/chapter%2005%20to%2009) folder, commented out. Individual C files containing questions from Chapter 10 can be found in their respective chapter directories.
