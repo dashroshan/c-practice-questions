@@ -7,11 +7,7 @@ void displayFileWNums(char *name);
 
 int main()
 {
-	//createFile("data", "Hello, I am Roshan Dash!");
-	//displayFile("dataCopy");
-	int num[]={1,3,7,15,19};
-	createFileWNums("data1.o",num,5);
-	displayFileWNums("data1.o");
+	displayFile("data.o");
 	return (0);
 }
 
@@ -27,9 +23,9 @@ void createFileWNums(char *name, int num[], int length)
 {
 	FILE *fp;
 	fp = fopen(name, "w");
-	for (int i=0; i<length;i+=1)
+	for (int i = 0; i < length; i += 1)
 	{
-		putw(num[i],fp);
+		putw(num[i], fp);
 	}
 	fclose(fp);
 }
@@ -53,7 +49,7 @@ void displayFileWNums(char *name)
 	fp = fopen(name, "r");
 	while ((num = getw(fp)) != EOF)
 	{
-		printf("%d ",num);
+		printf("%d ", num);
 	}
 	fclose(fp);
 }
