@@ -15,6 +15,7 @@ void print(node *head);
 int count(node *head);
 node *insert(node *head, int insertBefore, int insertValue);
 node *delete (node *head, int deleteValue);
+node *insertInAscSortedList(node *head, int insertValue);
 
 int main()
 {
@@ -31,6 +32,12 @@ int main()
 	linkedListHead = insert(linkedListHead, insertBefore, toInsert); // Insert a new element
 	printf("Total elements : %d\n", count(linkedListHead));			 // Print total elements
 	print(linkedListHead);											 // Print all elements
+
+	printf("\nEnter value to insert : ");
+	scanf("%d", &toInsert);
+	linkedListHead = insertInAscSortedList(linkedListHead, toInsert); // Insert a new element in sorted list
+	printf("Total elements : %d\n", count(linkedListHead));			  // Print total elements
+	print(linkedListHead);											  // Print all elements
 
 	printf("\nEnter value to delete : ");
 	scanf("%d", &toDelete);
@@ -139,6 +146,34 @@ node *delete (node *head, int deleteValue)
 				break;
 			}
 			list = list->next;
+		}
+		return (head);
+	}
+}
+
+node *insertInAscSortedList(node *head, int insertValue)
+{
+	node *new, *list;
+	new = (node *)malloc(sizeof(node)); // Creating a new node
+	new->num = insertValue;
+	if (head->num >= insertValue) // Node to be inserted at the front
+	{
+		new->next = head;
+		head = new;
+		return (head);
+	}
+	else // Node to be inserted in the middle or end (still middle as a dummy node with -999 is used)
+	{
+		list = head;
+		while (list->next != NULL)
+		{
+			if ((list->next->num >= insertValue) || list->next->next == NULL) // Next is the node to be inserted before
+			{
+				new->next = list->next; // Next of new node points to the next of the list node
+				list->next = new;		// Next of the current list node points to the new node
+				break;
+			}
+			list = list->next; // Move to next node of the list
 		}
 		return (head);
 	}
