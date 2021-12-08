@@ -11,12 +11,14 @@ typedef struct linkedList node;
 
 node *create(void);
 void print(node *list);
+node *reverse(node *list);
 
 int main()
 {
 	node *listHead;
-	listHead = create(); // Create a linked list
-	print(listHead);	 // Print the elements of the linked list
+	listHead = create();		  // Create a linked list
+	listHead = reverse(listHead); // Reverse the linked list
+	print(listHead);			  // Print the elements of the linked list
 	return (0);
 }
 
@@ -50,7 +52,7 @@ node *create(void)
 	return (head);
 }
 
-//Function to take the head of a linked list and print all its elements
+// Function which takes the head of a linked list and prints all its elements
 void print(node *list)
 {
 	printf("Elements : ");
@@ -66,4 +68,25 @@ void print(node *list)
 			list = list->next;
 		}
 	}
+}
+
+// Function which takes the head of a linked list and returns a pointer to head of the reversed list
+node *reverse(node *list)
+{
+	node *previousNode, *currentNode;
+	previousNode = list;
+	currentNode = list->next;
+	list = list->next;
+	previousNode->next = NULL; // Make first node as the last node
+
+	while (list != NULL)
+	{
+		list = list->next;
+		currentNode->next = previousNode;
+		previousNode = currentNode;
+		currentNode = list;
+	}
+
+	list = previousNode; // Make last node as the first node
+	return (list);
 }
