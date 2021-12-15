@@ -19,4 +19,4 @@ These are my answers to the exercise problems from E. Balagurusamy's Programming
 | 11 | Pointers |
 | 12 | File Management in C |
 | 13 | Dynamic Memory Allocation and Linked List |
-| 14 | ThePreporcessor |
+| 14 | The Preprocessor |
