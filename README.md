@@ -1,4 +1,4 @@
-## C Practice
+## Programming in ANSI C Exercises
 
 These are my answers to the exercise problems from E. Balagurusamy's Programming in Ansi C book. Solutions are present as individual C files inside their respective chapter directories.
 
